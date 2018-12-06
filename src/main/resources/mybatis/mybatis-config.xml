@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--See Also: http://www.mybatis.org/spring/zh/index.html-->
+<configuration>
+    <!--properties such as username and password required by database
+    can be found in mysql-config.properties, and
+    you must create such a file in the desired path-->
+    <properties resource="mybatis/mysql-config.properties"/>
+    
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+</configuration>
