@@ -47,7 +47,7 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
         <!-- 配置mybatis全局配置文件 -->
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
         <!-- 扫描model包，使用别名 -->
-        <property name="typeAliasesPackage" value="com.azure.mall.model"/>
+        <property name="typeAliasesPackage" value="com.azure.mall.models"/>
         <!-- 扫描sql配置文件：mapper需要的Xml文件 -->
         <property name="mapperLocations" value="classpath*:mybatis/mappers/*.xml"/>
     </bean>
@@ -56,7 +56,14 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 注入sqlSessionFactory -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="com.azure.mall.mapper"/>
+        <property name="basePackage" value="com.azure.mall.mappers"/>
     </bean>
 
+    <bean id="testLogger" class="org.apache.log4j.Logger" factory-method="getLogger">
+        <constructor-arg value="testLogger"/>
+    </bean>
+
+    <context:component-scan base-package="com.azure.mall.models"/>
+    <context:component-scan base-package="com.azure.mall.services"/>
+    <context:component-scan base-package="com.azure.mall.mappers"/>
 </beans>

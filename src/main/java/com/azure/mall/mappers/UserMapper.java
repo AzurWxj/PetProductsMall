@@ -1,6 +1,6 @@
-package com.azure.mall.mapper;
+package com.azure.mall.mappers;
 
-import com.azure.mall.model.User;
+import com.azure.mall.models.User;
 
 import java.util.List;
 

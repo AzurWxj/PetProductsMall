@@ -1,9 +1,8 @@
-import com.azure.mall.mapper.AdminMapper;
-import com.azure.mall.mapper.UserMapper;
-import com.azure.mall.model.Admin;
-import com.azure.mall.model.User;
+import com.azure.mall.mappers.AdminMapper;
+import com.azure.mall.mappers.UserMapper;
+import com.azure.mall.models.Admin;
+import com.azure.mall.models.User;
 import org.apache.log4j.Logger;
-import org.apache.log4j.spi.LoggerFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,17 +19,20 @@ public class SqlSessionFactoryTest {
     @Autowired
     private UserMapper userMapper;
 
-    private Logger logger= Logger.getLogger("testLogger");
+    @Autowired
+    private Logger testLogger;
+
+    //private Logger testLogger= Logger.getLogger("testLogger");
 
     @Test
     public void getAdmins(){
         for(Admin admin:adminMapper.selectAdminsByName("scott"))
-            logger.fatal(admin);
+            testLogger.info(admin);
     }
 
     @Test
     public void getUsers(){
         for(User user:userMapper.selectUsersByUsername("南波湾"))
-            logger.fatal(user);
+            testLogger.info(user);
     }
 }

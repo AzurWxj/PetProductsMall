@@ -1,11 +1,12 @@
-package com.azure.mall.service;
+package com.azure.mall.services;
 
-import com.azure.mall.mapper.AdminMapper;
-import com.azure.mall.model.Admin;
+import com.azure.mall.mappers.AdminMapper;
+import com.azure.mall.models.Admin;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//@Service
+@Service
 public class AdminService {
     private AdminMapper adminMapper;
 

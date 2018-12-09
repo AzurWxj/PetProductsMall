@@ -1,4 +1,4 @@
-package com.azure.mall.model;
+package com.azure.mall.models;
 
 public class Admin {
     private String admin,password,id;

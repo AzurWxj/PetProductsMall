@@ -1,4 +1,4 @@
-package com.azure.mall.model;
+package com.azure.mall.models;
 
 public class User {
     private String id,username,password,email,name,phone,address,potrait;

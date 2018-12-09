@@ -1,6 +1,6 @@
-package com.azure.mall.mapper;
+package com.azure.mall.mappers;
 
-import com.azure.mall.model.Admin;
+import com.azure.mall.models.Admin;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
