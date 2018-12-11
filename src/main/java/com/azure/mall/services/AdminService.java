@@ -2,10 +2,12 @@ package com.azure.mall.services;
 
 import com.azure.mall.mappers.AdminMapper;
 import com.azure.mall.models.Admin;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@ComponentScan
 @Service
 public class AdminService {
     private AdminMapper adminMapper;
