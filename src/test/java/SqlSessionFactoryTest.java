@@ -2,6 +2,7 @@ import com.azure.mall.mappers.AdminMapper;
 import com.azure.mall.mappers.UserMapper;
 import com.azure.mall.models.Admin;
 import com.azure.mall.models.User;
+import com.azure.spring.config.context.SpringSharedContextConfig;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({"classpath:spring/spring-config.xml"})
+@ContextConfiguration(classes = SpringSharedContextConfig.class)
 public class SqlSessionFactoryTest {
 
     @Autowired

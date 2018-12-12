@@ -1,7 +1,9 @@
 package com.azure.mall.controllers;
 
 import com.azure.mall.models.Admin;
+import com.azure.mall.models.User;
 import com.azure.mall.services.AdminService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -37,5 +39,11 @@ public class TestController {
         model.addAttribute("admin", admin);
         model.addAttribute("beanmsg", show());
         return "test/showadmin";
+    }
+
+    @RequestMapping("/addUser")
+    public String addUser(User user) {
+        Logger.getLogger(this.getClass()).info(user);
+        return "none";
     }
 }
